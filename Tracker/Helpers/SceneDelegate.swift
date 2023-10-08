@@ -19,13 +19,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        let trackersViewController = UINavigationController(rootViewController: TrackersViewController())
-        trackersViewController.tabBarItem.image = UIImage(named: "recordCircle")
+        let trackerViewController = UINavigationController(rootViewController: TrackerViewController())
+        trackerViewController.tabBarItem.image = UIImage(named: "recordCircle")
         let ViewController = UINavigationController(rootViewController: ViewController())
         ViewController.tabBarItem.image = UIImage(named: "rabbit")
         ViewController.title = "Статистика"
         let tabBarController = TabBarController()
-        tabBarController.viewControllers = [trackersViewController, ViewController]
+        tabBarController.viewControllers = [trackerViewController, ViewController]
  
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)

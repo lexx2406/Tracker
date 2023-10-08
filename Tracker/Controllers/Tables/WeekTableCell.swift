@@ -27,7 +27,7 @@ final class WeekTableCell: UITableViewCell {
         return switchCell
     }()
     
-    static let identifier = "WeekDayTableViewCell"
+    static let identifier = "WeekTableCell"
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: WeekTableCell.identifier)

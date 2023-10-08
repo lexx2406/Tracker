@@ -49,7 +49,7 @@ enum Week: String, CaseIterable {
     }
 }
 
-struct Categorys {
+struct Category {
     let name: String
     let trackers: [Tracker]
 }

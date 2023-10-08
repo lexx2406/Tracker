@@ -7,9 +7,9 @@
 
 import UIKit
 
-class ScheduleVC: UIViewController {
+class ScheduleViewController: UIViewController {
     
-    public weak var delegate: ScheduleVCDelegate?
+    public weak var delegate: ScheduleViewControllerDelegate?
     private var schedule: [Week] = []
     
     private lazy var label: UILabel = {
@@ -79,7 +79,7 @@ class ScheduleVC: UIViewController {
     }
 }
 
-extension ScheduleVC: UITableViewDataSource {
+extension ScheduleViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Week.allCases.count
@@ -102,7 +102,7 @@ extension ScheduleVC: UITableViewDataSource {
     }
 }
 
-extension ScheduleVC: UITableViewDelegate {
+extension ScheduleViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 75
@@ -111,7 +111,7 @@ extension ScheduleVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { }
 }
 
-extension ScheduleVC: WeekTableCellDelegate {
+extension ScheduleViewController: WeekTableCellDelegate {
     
     func stateChanged(for day: Week, isOn: Bool) {
         if isOn {
