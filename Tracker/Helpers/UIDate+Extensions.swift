@@ -2,7 +2,7 @@
 //  UIDate+Extensions.swift
 //  Tracker
 //
-//  Created by Алексей Налимов on 30.10.2023.
+//  Created by Алексей Налимов on 01.10.2023.
 //
 
 import Foundation

@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		A89BC3E82AD2B881001D706A /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89BC3E72AD2B881001D706A /* UIColor+Extensions.swift */; };
 		A89BC3EA2AD2BDC2001D706A /* UIDate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89BC3E92AD2BDC2001D706A /* UIDate+Extensions.swift */; };
+		A89BC3EF2AD2F832001D706A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89BC3EE2AD2F832001D706A /* Models.swift */; };
+		A89BC3F12AD2FC22001D706A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89BC3F02AD2FC22001D706A /* TabBarController.swift */; };
+		A89BC3F42AD30959001D706A /* SheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89BC3F32AD30959001D706A /* SheduleViewController.swift */; };
+		A89BC3F72AD30A30001D706A /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89BC3F62AD30A30001D706A /* Protocols.swift */; };
+		A89BC3F92AD30ADB001D706A /* WeekTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89BC3F82AD30ADB001D706A /* WeekTableCell.swift */; };
 		A8A3CCC92AC9FF5B001166E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A3CCC82AC9FF5B001166E9 /* AppDelegate.swift */; };
 		A8A3CCCB2AC9FF5B001166E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A3CCCA2AC9FF5B001166E9 /* SceneDelegate.swift */; };
 		A8A3CCCD2AC9FF5B001166E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A3CCCC2AC9FF5B001166E9 /* ViewController.swift */; };
@@ -20,6 +25,11 @@
 /* Begin PBXFileReference section */
 		A89BC3E72AD2B881001D706A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		A89BC3E92AD2BDC2001D706A /* UIDate+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDate+Extensions.swift"; sourceTree = "<group>"; };
+		A89BC3EE2AD2F832001D706A /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		A89BC3F02AD2FC22001D706A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		A89BC3F32AD30959001D706A /* SheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheduleViewController.swift; sourceTree = "<group>"; };
+		A89BC3F62AD30A30001D706A /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		A89BC3F82AD30ADB001D706A /* WeekTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekTableCell.swift; sourceTree = "<group>"; };
 		A8A3CCC52AC9FF5B001166E9 /* Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A3CCC82AC9FF5B001166E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8A3CCCA2AC9FF5B001166E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,7 +54,6 @@
 		A89BC3E62AD2B845001D706A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				A8A3CCCC2AC9FF5B001166E9 /* ViewController.swift */,
 				A8A3CCC82AC9FF5B001166E9 /* AppDelegate.swift */,
 				A8A3CCCA2AC9FF5B001166E9 /* SceneDelegate.swift */,
 				A89BC3E72AD2B881001D706A /* UIColor+Extensions.swift */,
@@ -61,6 +70,29 @@
 				A8A3CCD12AC9FF5E001166E9 /* Assets.xcassets */,
 			);
 			path = Resurses;
+			sourceTree = "<group>";
+		};
+		A89BC3ED2AD2F818001D706A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A89BC3EE2AD2F832001D706A /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A89BC3F22AD2FC86001D706A /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Collections;
+			sourceTree = "<group>";
+		};
+		A89BC3F52AD30A16001D706A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A89BC3F62AD30A30001D706A /* Protocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		A8A3CCBC2AC9FF5B001166E9 = {
@@ -82,9 +114,16 @@
 		A8A3CCC72AC9FF5B001166E9 /* Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				A8A3CCCC2AC9FF5B001166E9 /* ViewController.swift */,
+				A89BC3F02AD2FC22001D706A /* TabBarController.swift */,
+				A89BC3F32AD30959001D706A /* SheduleViewController.swift */,
+				A89BC3F52AD30A16001D706A /* Protocols */,
+				A89BC3F22AD2FC86001D706A /* Collections */,
+				A89BC3ED2AD2F818001D706A /* Models */,
 				A89BC3EB2AD2D893001D706A /* Resurses */,
 				A89BC3E62AD2B845001D706A /* Helpers */,
 				A8A3CCD62AC9FF5E001166E9 /* Info.plist */,
+				A89BC3F82AD30ADB001D706A /* WeekTableCell.swift */,
 			);
 			path = Tracker;
 			sourceTree = "<group>";
@@ -163,8 +202,13 @@
 				A89BC3EA2AD2BDC2001D706A /* UIDate+Extensions.swift in Sources */,
 				A8A3CCCD2AC9FF5B001166E9 /* ViewController.swift in Sources */,
 				A8A3CCC92AC9FF5B001166E9 /* AppDelegate.swift in Sources */,
+				A89BC3F72AD30A30001D706A /* Protocols.swift in Sources */,
+				A89BC3F92AD30ADB001D706A /* WeekTableCell.swift in Sources */,
+				A89BC3EF2AD2F832001D706A /* Models.swift in Sources */,
+				A89BC3F12AD2FC22001D706A /* TabBarController.swift in Sources */,
 				A8A3CCCB2AC9FF5B001166E9 /* SceneDelegate.swift in Sources */,
 				A89BC3E82AD2B881001D706A /* UIColor+Extensions.swift in Sources */,
+				A89BC3F42AD30959001D706A /* SheduleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +284,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -294,7 +338,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
