@@ -68,8 +68,8 @@ class TrackerViewController: UIViewController {
             frame: .zero,
             collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.register(CollectionViewCell.self,
-                                forCellWithReuseIdentifier: TrackersCollectionViewCell.identifier)
-        collectionView.register(SupplementaryView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: TrackersSupplementaryView.identifier)
+                                forCellWithReuseIdentifier: CollectionViewCell.identifier)
+        collectionView.register(SupplementaryView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SupplementaryView.identifier)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }()
