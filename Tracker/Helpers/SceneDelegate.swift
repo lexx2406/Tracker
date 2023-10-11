@@ -8,29 +8,22 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-    
+
+    var window: UIWindow?
+
     func sceneDidDisconnect(_ scene: UIScene) {}
     func sceneDidBecomeActive(_ scene: UIScene) {}
     func sceneWillResignActive(_ scene: UIScene) {}
     func sceneWillEnterForeground(_ scene: UIScene) {}
-    func sceneDidEnterBackground(_ scene: UIScene) {
-        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
-    }
-    
-    var window: UIWindow?
+    func sceneDidEnterBackground(_ scene: UIScene) {}
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        let trackerViewController = UINavigationController(rootViewController: TrackerViewController())
-        trackerViewController.tabBarItem.image = UIImage(named: "recordCircle")
-        let ViewController = UINavigationController(rootViewController: ViewController())
-        ViewController.tabBarItem.image = UIImage(named: "rabbit")
-        ViewController.title = "Статистика"
-        let tabBarController = TabBarController()
-        tabBarController.viewControllers = [trackerViewController, ViewController]
- 
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = tabBarController
+        guard let scene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(windowScene: scene)
+        let tabBar = TabBarViewController()
+        window?.rootViewController = tabBar
         window?.makeKeyAndVisible()
     }
 }
+
+
 

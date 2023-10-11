@@ -7,22 +7,57 @@
 
 import Foundation
 
-protocol ScheduleViewControllerDelegate: AnyObject {
-    func createSchedule(schedule: [Week])
-}
+struct Protocols {
+    
+    protocol TrackerViewControllerProtocol: AnyObject {
+        var presenter: TrackerViewPresenterProtocol? { get set }
+        func reloadCollectionView()
+        func setupTrackersFromDatePicker()
+    }
+    
+    protocol TrackerViewPresenterProtocol: AnyObject {
+        var currentDate: Date? { get set }
+        func filterTrackers(text: String?)
+    }
+    
+    protocol CreateTrackerViewControllerProtocol: AnyObject {
+        var presenter: TrackerViewPresenterProtocol? { get set }
+        var viewController: TrackerViewControllerProtocol? { get }
+        func switchToTrackerVC()
+    }
+    
+    protocol NewTrackerViewControllerProtocol: AnyObject {
+        var presenter: NewTrackerViewPresenterProtocol? { get set }
+        var typeOfTracker: TypeOfTracker? { get }
+        func enableCreateButton()
+        func disableCreateButton()
+        func reloadTableView()
+    }
+    
+    protocol NewTrackerViewPresenterProtocol: AnyObject {
+        var view: NewTrackerViewControllerProtocol? { get set }
+        var tableViewTitle: [String] { get }
+        func createNewTracker() -> [TrackerCategory]
+    }
+    
+    protocol NewCategoryViewControllerProtocol: AnyObject {
+        var viewController: CategoryViewControllerProtocol? { get }
+    }
+    
+    protocol CategoryViewControllerProtocol: AnyObject {
+        var viewController: NewTrackerViewControllerProtocol? { get }
+        func checkCellsCount()
+        func reloadTableView()
+    }
+    
+    protocol ScheduleViewControllerProtocol: AnyObject {
+        var presenter: ScheduleViewPresenterProtocol? { get set }
+        var viewController: NewTrackerViewControllerProtocol? { get }
+    }
+    
+    protocol ScheduleViewPresenterProtocol: AnyObject {
+        var daysInInt: [Int] { get set }
+        var days: [String] { get set }
+    }
 
-protocol WeekTableCellDelegate: AnyObject {
-    func stateChanged(for day: Week, isOn: Bool)
-}
-
-protocol EventViewControllerDelegate: AnyObject {
-    func createTracker(_ tracker: Tracker, categoryName: String)
-}
-
-protocol CreateTrackerViewControllerDelegate: AnyObject {
-    func createTracker(_ tracker: Tracker, categoryName: String)
-}
-
-protocol CollectionViewCellDelegate: AnyObject {
-    func completedTracker(id: UUID)
 }
