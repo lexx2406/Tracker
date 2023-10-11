@@ -122,7 +122,6 @@
 		A89BC3EB2AD2D893001D706A /* Resurses */ = {
 			isa = PBXGroup;
 			children = (
-				A8A3CCD62AC9FF5E001166E9 /* Info.plist */,
 				A8A3CCCE2AC9FF5B001166E9 /* Main.storyboard */,
 				A8A3CCD32AC9FF5E001166E9 /* LaunchScreen.storyboard */,
 				A8A3CCD12AC9FF5E001166E9 /* Assets.xcassets */,
@@ -241,6 +240,7 @@
 				A89BC3FB2AD31B94001D706A /* Controllers */,
 				A89BC3E62AD2B845001D706A /* Helpers */,
 				A89BC3EB2AD2D893001D706A /* Resurses */,
+				A8A3CCD62AC9FF5E001166E9 /* Info.plist */,
 			);
 			path = Tracker;
 			sourceTree = "<group>";
