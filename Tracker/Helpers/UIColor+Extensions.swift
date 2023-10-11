@@ -32,5 +32,7 @@ extension UIColor {
     static var YPBlack: UIColor { UIColor(named: "YPBlack") ?? UIColor.black }
     static var YPBlue: UIColor { UIColor(named: "YPBlue") ?? UIColor.blue }
     static var BackgroundColor: UIColor { UIColor(named: "BackgroundColor") ?? UIColor.red }
-    static var FindColor: UIColor { UIColor(named: "FindColor") ?? UIColor.gray }
+    static var YPWhite: UIColor { UIColor(named: "YPWhite") ?? UIColor.white }
+    static var YPLightGray: UIColor { UIColor(named: "YPLightGray") ?? UIColor.lightGray}
+    
 }
