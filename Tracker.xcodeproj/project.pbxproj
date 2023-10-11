@@ -122,10 +122,10 @@
 		A89BC3EB2AD2D893001D706A /* Resurses */ = {
 			isa = PBXGroup;
 			children = (
+				A8A3CCD62AC9FF5E001166E9 /* Info.plist */,
 				A8A3CCCE2AC9FF5B001166E9 /* Main.storyboard */,
 				A8A3CCD32AC9FF5E001166E9 /* LaunchScreen.storyboard */,
 				A8A3CCD12AC9FF5E001166E9 /* Assets.xcassets */,
-				A8A3CCD62AC9FF5E001166E9 /* Info.plist */,
 			);
 			path = Resurses;
 			sourceTree = "<group>";
@@ -133,7 +133,6 @@
 		A89BC3FB2AD31B94001D706A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A89BC4332AD752AD001D706A /* New Group */,
 				A89BC4212AD74303001D706A /* Create */,
 				A89BC4202AD74151001D706A /* Filter */,
 				A89BC41F2AD736E4001D706A /* Category */,
@@ -218,13 +217,6 @@
 				A89BC4312AD75277001D706A /* NewTrackerSupplementaryView.swift */,
 			);
 			path = Create;
-			sourceTree = "<group>";
-		};
-		A89BC4332AD752AD001D706A /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		A8A3CCBC2AC9FF5B001166E9 = {
