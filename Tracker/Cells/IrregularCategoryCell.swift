@@ -8,7 +8,7 @@
 import UIKit
 
 final class IrregularCategoryCell: UITableViewCell {
- 
+    
     let title: UILabel = {
         let label = UILabel()
         label.text = "Категория"
@@ -31,7 +31,7 @@ final class IrregularCategoryCell: UITableViewCell {
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
-    
+  
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()
@@ -40,7 +40,7 @@ final class IrregularCategoryCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+ 
     private func setupView() {
         NotificationCenter.default.addObserver(self, selector: #selector(showCategory), name: Notification.Name("category_changed"), object: nil)
         contentView.addSubview(title)
@@ -55,7 +55,7 @@ final class IrregularCategoryCell: UITableViewCell {
             arrow.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
         ])
     }
-
+ 
     @objc
     private func showCategory() {
         title.removeFromSuperview()
