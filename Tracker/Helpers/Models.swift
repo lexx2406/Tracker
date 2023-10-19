@@ -9,27 +9,6 @@ import UIKit
 
 var trackers: [TrackerCategory] = []
 
-let colorCollectionData = [
-    UIColor(named: "Color_one"),
-    UIColor(named: "Color_two"),
-    UIColor(named: "Color_three"),
-    UIColor(named: "Color_four"),
-    UIColor(named: "Color_five"),
-    UIColor(named: "Color_six"),
-    UIColor(named: "Color_seven"),
-    UIColor(named: "Color_eight"),
-    UIColor(named: "Color_nine"),
-    UIColor(named: "Color_ten"),
-    UIColor(named: "Color_eleven"),
-    UIColor(named: "Color_twelve"),
-    UIColor(named: "Color_thirteen"),
-    UIColor(named: "Сolor_fourteen"),
-    UIColor(named: "Сolor_fiveteen"),
-    UIColor(named: "Color_sixteen"),
-    UIColor(named: "Color_seventeen"),
-    UIColor(named: "Color_eighteen")
-]
-
 let emojiCollectionData = ["🙂", "😻", "🌺", "🐶", "❤️", "😱", "😇", "😡", "🥶", "🤔", "🙌", "🍔", "🥦", "🏓", "🥇", "🎸", "🏝", "😪"]
 
 var categories = ["Важное", "Домашний уют", "Работа", "Учёба", "Спорт"]
@@ -89,3 +68,23 @@ struct TrackerRecord {
     }
 }
 
+let colorCollectionData = [
+    UIColor(red: 0.992, green: 0.298, blue: 0.286, alpha: 1),
+    UIColor(red: 1, green: 0.533, blue: 0.118, alpha: 1),
+    UIColor(red: 0, green: 0.482, blue: 0.98, alpha: 1),
+    UIColor(red: 0.431, green: 0.267, blue: 0.996, alpha: 1),
+    UIColor(red: 0.2, green: 0.812, blue: 0.412, alpha: 1),
+    UIColor(red: 0.902, green: 0.427, blue: 0.831, alpha: 1),
+    UIColor(red: 0.976, green: 0.831, blue: 0.831, alpha: 1),
+    UIColor(red: 0.204, green: 0.655, blue: 0.996, alpha: 1),
+    UIColor(red: 0.275, green: 0.902, blue: 0.616, alpha: 1),
+    UIColor(red: 0.208, green: 0.204, blue: 0.486, alpha: 1),
+    UIColor(red: 1, green: 0.404, blue: 0.302, alpha: 1),
+    UIColor(red: 1, green: 0.6, blue: 0.8, alpha: 1),
+    UIColor(red: 0.965, green: 0.769, blue: 0.545, alpha: 1),
+    UIColor(red: 0.475, green: 0.58, blue: 0.961, alpha: 1),
+    UIColor(red: 0.514, green: 0.173, blue: 0.945, alpha: 1),
+    UIColor(red: 0.678, green: 0.337, blue: 0.855, alpha: 1),
+    UIColor(red: 0.553, green: 0.447, blue: 0.902, alpha: 1),
+    UIColor(red: 0.184, green: 0.816, blue: 0.345, alpha: 1)
+]

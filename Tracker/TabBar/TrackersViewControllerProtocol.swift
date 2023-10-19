@@ -59,7 +59,7 @@ class TrackersViewController: UIViewController {
         datePicker.calendar = Calendar(identifier: .iso8601)
         datePicker.maximumDate = Date()
         datePicker.locale = Locale(identifier: "ru_RU")
-        datePicker.addTarget(self, action: #selector(datePickerValueChanged), for: .valueChanged)
+        datePicker.addTarget(TrackersViewController.self, action: #selector(datePickerValueChanged), for: .valueChanged)
         return datePicker
     }()
     
@@ -194,7 +194,7 @@ class TrackersViewController: UIViewController {
 
     @objc
     private func plusTapped() {
-        let selecterTrackerVC = TrackerTypeViewController()
+        let selecterTrackerVC = TypeViewController()
         show(selecterTrackerVC, sender: self)
     }
 
