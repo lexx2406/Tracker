@@ -1,5 +1,5 @@
 //
-//  TabBarViewController.swift
+//  TabBarController.swift
 //  Tracker
 //
 //  Created by Алексей Налимов on 05.10.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class TabBarViewController: UITabBarController {
+final class TabBarController: UITabBarController {
    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)

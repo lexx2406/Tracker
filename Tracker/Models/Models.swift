@@ -8,44 +8,13 @@
 import UIKit
 
 var trackers: [TrackerCategory] = []
-
-let emojiCollectionData = ["🙂", "😻", "🌺", "🐶", "❤️", "😱", "😇", "😡", "🥶", "🤔", "🙌", "🍔", "🥦", "🏓", "🥇", "🎸", "🏝", "😪"]
-
 var categories = ["Важное", "Домашний уют", "Работа", "Учёба", "Спорт"]
 var categoryName = ""
-
-enum dayOfWeek: String {
-    case monday = "понедельник"
-    case tuesday = "вторник"
-    case wednesday = "среда"
-    case thursday = "четверг"
-    case friday = "пятница"
-    case saturday = "суббота"
-    case sunday = "воскресенье"
-}
-
-let daysOfWeek: [dayOfWeek] = [.monday, .tuesday, .wednesday, .thursday, .friday, .saturday, .sunday]
-
+let daysOfWeek: [weekdays] = [.monday, .tuesday, .wednesday, .thursday, .friday, .saturday, .sunday]
 var selectedDays: [String] = []
 var shortSelectedDays: [String] = []
 var titles: [String] = []
 var trackerRecords: [TrackerRecord] = []
-
-struct Event {
-    let id: UUID
-    var name: String
-    var emoji: String
-    var color: UIColor
-    var day: [String]?
-    
-    init(id: UUID = UUID(), name: String, emoji: String, color: UIColor, day: [String]?) {
-        self.id = id
-        self.name = name
-        self.emoji = emoji
-        self.color = color
-        self.day = day
-    }
-}
 
 struct TrackerCategory {
     
@@ -68,6 +37,39 @@ struct TrackerRecord {
     }
 }
 
+struct Event {
+    let id: UUID
+    var name: String
+    var emoji: String
+    var color: UIColor
+    var day: [String]?
+    
+    init(id: UUID = UUID(), name: String, emoji: String, color: UIColor, day: [String]?) {
+        self.id = id
+        self.name = name
+        self.emoji = emoji
+        self.color = color
+        self.day = day
+    }
+}
+
+enum weekdays: String {
+    case monday = "понедельник"
+    case tuesday = "вторник"
+    case wednesday = "среда"
+    case thursday = "четверг"
+    case friday = "пятница"
+    case saturday = "суббота"
+    case sunday = "воскресенье"
+}
+
+let emojiCollectionData = ["🙂", "😻", "🌺", "🐶", "❤️", "😱", "😇", "😡", "🥶", "🤔", "🙌", "🍔", "🥦", "🏓", "🥇", "🎸", "🏝", "😪"]
+
+
+let colorCollectionData = [
+]
+
+/*
 let colorCollectionData = [
     UIColor(red: 0.992, green: 0.298, blue: 0.286, alpha: 1),
     UIColor(red: 1, green: 0.533, blue: 0.118, alpha: 1),
@@ -88,3 +90,4 @@ let colorCollectionData = [
     UIColor(red: 0.553, green: 0.447, blue: 0.902, alpha: 1),
     UIColor(red: 0.184, green: 0.816, blue: 0.345, alpha: 1)
 ]
+*/

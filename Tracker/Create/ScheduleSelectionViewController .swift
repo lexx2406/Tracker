@@ -34,7 +34,7 @@ final class ScheduleSelectionViewController: UIViewController {
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         button.layer.cornerRadius = 16
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(doneButtonTapped), for: .touchUpInside)
+        button.addTarget(ScheduleSelectionViewController.self, action: #selector(doneButtonTapped), for: .touchUpInside)
         return button
     }()
     

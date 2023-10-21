@@ -59,7 +59,7 @@ final class TrackerCell: UICollectionViewCell {
         let image = UIImage(systemName: "plus")
         button.setImage(image, for: .normal)
         button.tintColor = .white
-        button.addTarget(self, action: #selector(plusTapped), for: .touchUpInside)
+        button.addTarget(TrackerCell.self, action: #selector(plusTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
