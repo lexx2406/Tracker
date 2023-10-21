@@ -30,6 +30,7 @@
 		A8AEA7BA2AE1E117008C5F9E /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AEA7B92AE1E117008C5F9E /* CategoryCell.swift */; };
 		A8AEA7BC2AE1EFFB008C5F9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8AEA7BB2AE1EFFB008C5F9E /* Main.storyboard */; };
 		A8AEA7BF2AE3D5D3008C5F9E /* TrackersViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AEA7BE2AE3D5D2008C5F9E /* TrackersViewControllerProtocol.swift */; };
+		A8AEA7C22AE3E1A5008C5F9E /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AEA7C12AE3E1A5008C5F9E /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		A8AEA7B92AE1E117008C5F9E /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		A8AEA7BB2AE1EFFB008C5F9E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A8AEA7BE2AE3D5D2008C5F9E /* TrackersViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackersViewControllerProtocol.swift; sourceTree = "<group>"; };
+		A8AEA7C12AE3E1A5008C5F9E /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		A89BC3E62AD2B845001D706A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A8AEA7C12AE3E1A5008C5F9E /* UIColor+Extensions.swift */,
 				A8A3CCC82AC9FF5B001166E9 /* AppDelegate.swift */,
 				A8A3CCCA2AC9FF5B001166E9 /* SceneDelegate.swift */,
 			);
@@ -269,6 +272,7 @@
 				A89BC4172AD723CE001D706A /* CollectionHeaderSupplementaryView.swift in Sources */,
 				A89BC4272AD74493001D706A /* ScheduleSelectionViewController .swift in Sources */,
 				A8AEA7BF2AE3D5D3008C5F9E /* TrackersViewControllerProtocol.swift in Sources */,
+				A8AEA7C22AE3E1A5008C5F9E /* UIColor+Extensions.swift in Sources */,
 				A8A3CCCD2AC9FF5B001166E9 /* StatisticsViewController.swift in Sources */,
 				A8A3CCC92AC9FF5B001166E9 /* AppDelegate.swift in Sources */,
 				A89BC4152AD7237C001D706A /* ScheduleCell.swift in Sources */,
