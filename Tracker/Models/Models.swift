@@ -14,7 +14,7 @@ let daysOfWeek: [weekdays] = [.monday, .tuesday, .wednesday, .thursday, .friday,
 var selectedDays: [String] = []
 var shortSelectedDays: [String] = []
 var titles: [String] = []
-var trackerRecords: [TrackerRecord] = []
+var completedTrackers: [TrackerRecord] = []
 
 struct TrackerCategory {
     

@@ -224,9 +224,9 @@ extension TrackersViewController: UICollectionViewDataSource {
         cell?.emoji.text = localTrackers[indexPath.section].trackers[indexPath.row].emoji
         cell?.name.text = localTrackers[indexPath.section].trackers[indexPath.row].name
         cell?.plusButton.backgroundColor = localTrackers[indexPath.section].trackers[indexPath.row].color
-        cell?.quantity.text = "\(trackerRecords.filter({$0.id == localTrackers[indexPath.section].trackers[indexPath.row].id}).count) дней"
+        cell?.quantity.text = "\(completedTrackers.filter({$0.id == localTrackers[indexPath.section].trackers[indexPath.row].id}).count) дней"
         makeDate(dateFormat: "yyyy/MM/dd")
-        if trackerRecords.filter({$0.id == localTrackers[indexPath.section].trackers[indexPath.row].id}).contains(where: {$0.day == dateString}) {
+        if completedTrackers.filter({$0.id == localTrackers[indexPath.section].trackers[indexPath.row].id}).contains(where: {$0.day == dateString}) {
             cell?.plusButton.backgroundColor = localTrackers[indexPath.section].trackers[indexPath.row].color.withAlphaComponent(0.5)
             cell?.plusButton.setImage(UIImage(systemName: "checkmark"), for: .normal)
         } else {
@@ -294,10 +294,10 @@ extension TrackersViewController: TrackersViewControllerProtocol {
  
     func saveDoneEvent(id: UUID, index: IndexPath) {
         makeDate(dateFormat: "yyyy/MM/dd")
-        if trackerRecords.filter({$0.id == localTrackers[index.section].trackers[index.row].id}).contains(where: {$0.day == dateString}) {
-            trackerRecords.removeAll(where: {$0.id == id && $0.day == dateString})
+        if completedTrackers.filter({$0.id == localTrackers[index.section].trackers[index.row].id}).contains(where: {$0.day == dateString}) {
+            completedTrackers.removeAll(where: {$0.id == id && $0.day == dateString})
         } else {
-            trackerRecords.append(TrackerRecord(id: id, day: dateString))
+            completedTrackers.append(TrackerRecord(id: id, day: dateString))
         }
         trackersCollection.reloadData()
     }
