@@ -185,9 +185,9 @@ final class NewIrregularEventViewController: UIViewController {
         let emoji = emojiCollectionData[emojiIndex?.row ?? 0]
         let colorIndex = colorCollection.indexPathsForSelectedItems?.first
         let color = colorCollectionData[colorIndex?.row ?? 0]
-        let event = Event(name: name, emoji: emoji, color: color, day: nil)
+        let event = Tracker(name: name, emoji: emoji, color: color, day: nil)
         
-        var allTrackersInCategory: [Event] = []
+        var allTrackersInCategory: [Tracker] = []
         for tracker in trackers {
             if tracker.label == category {
                 allTrackersInCategory = tracker.trackers

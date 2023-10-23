@@ -19,9 +19,9 @@ var trackerRecords: [TrackerRecord] = []
 struct TrackerCategory {
     
     let label: String
-    let trackers: [Event]
+    let trackers: [Tracker]
     
-    init(label: String, trackers: [Event]) {
+    init(label: String, trackers: [Tracker]) {
         self.label = label
         self.trackers = trackers
     }
@@ -37,7 +37,7 @@ struct TrackerRecord {
     }
 }
 
-struct Event {
+struct Tracker {
     let id: UUID
     var name: String
     var emoji: String

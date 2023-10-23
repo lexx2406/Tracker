@@ -146,7 +146,7 @@ class TrackersViewController: UIViewController {
     }
 
     private func updateCollection() {
-        var newEvents: [Event] = []
+        var newEvents: [Tracker] = []
         var newCategory: String = ""
         var newTrackers: [TrackerCategory] = []
         localTrackers = []
@@ -257,7 +257,7 @@ extension TrackersViewController: UICollectionViewDelegate {}
 extension TrackersViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        var newEvents: [Event] = []
+        var newEvents: [Tracker] = []
         var newCategory: String = ""
         var newTrackers: [TrackerCategory] = []
         datePickerValueChanged(sender: datePicker)
