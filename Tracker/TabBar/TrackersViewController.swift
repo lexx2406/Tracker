@@ -227,14 +227,12 @@ extension TrackersViewController: UICollectionViewDataSource {
         cell?.plusButton.backgroundColor = localTrackers[indexPath.section].trackers[indexPath.row].color
         let numberOfDays = completedTrackers.filter {$0.id == localTrackers[indexPath.section].trackers[indexPath.row].id}.count
         if numberOfDays == 0 {
-            changeByNumbers = "дней"
-        } else if
-            numberOfDays < 2 {
-            changeByNumbers = "день"
-        } else if numberOfDays < 5 {
-            changeByNumbers = "дня"
-        } else {
-            changeByNumbers = "дней"
+            changeByNumbers = "дней" }
+        else if numberOfDays < 2 {
+            changeByNumbers = "день" }
+        else if numberOfDays < 5 {
+            changeByNumbers = "дня" }
+        else { changeByNumbers = "дней"
         }
         cell?.quantity.text = "\(numberOfDays) \(changeByNumbers)"
         makeDate(dateFormat: "yyyy/MM/dd")
