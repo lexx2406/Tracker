@@ -29,7 +29,7 @@ struct TrackerCategory {
 
 struct TrackerRecord {
     let id: UUID
-    var day: String
+    let day: String
     
     init(id: UUID, day: String) {
         self.id = id
@@ -39,10 +39,10 @@ struct TrackerRecord {
 
 struct Tracker {
     let id: UUID
-    var name: String
-    var emoji: String
-    var color: UIColor
-    var day: [String]?
+    let name: String
+    let emoji: String
+    let color: UIColor
+    let day: [String]?
     
     init(id: UUID = UUID(), name: String, emoji: String, color: UIColor, day: [String]?) {
         self.id = id
