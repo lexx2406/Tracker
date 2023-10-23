@@ -8,9 +8,10 @@
 import UIKit
 
 class TrackersViewController: UIViewController {
-
+    
     var choosenDay = ""
     var dateString = ""
+    var changeByNumbers = "дней"
     var localTrackers: [TrackerCategory] = trackers
     var trackersCollection: UICollectionView = {
         let collection = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
@@ -224,7 +225,18 @@ extension TrackersViewController: UICollectionViewDataSource {
         cell?.emoji.text = localTrackers[indexPath.section].trackers[indexPath.row].emoji
         cell?.name.text = localTrackers[indexPath.section].trackers[indexPath.row].name
         cell?.plusButton.backgroundColor = localTrackers[indexPath.section].trackers[indexPath.row].color
-        cell?.quantity.text = "\(completedTrackers.filter({$0.id == localTrackers[indexPath.section].trackers[indexPath.row].id}).count) дней"
+        let numberOfDays = completedTrackers.filter {$0.id == localTrackers[indexPath.section].trackers[indexPath.row].id}.count
+        if numberOfDays == 0 {
+            changeByNumbers = "дней"
+        } else if
+            numberOfDays < 2 {
+            changeByNumbers = "день"
+        } else if numberOfDays < 5 {
+            changeByNumbers = "дня"
+        } else {
+            changeByNumbers = "дней"
+        }
+        cell?.quantity.text = "\(numberOfDays) \(changeByNumbers)"
         makeDate(dateFormat: "yyyy/MM/dd")
         if completedTrackers.filter({$0.id == localTrackers[indexPath.section].trackers[indexPath.row].id}).contains(where: {$0.day == dateString}) {
             cell?.plusButton.backgroundColor = localTrackers[indexPath.section].trackers[indexPath.row].color.withAlphaComponent(0.5)
@@ -317,3 +329,4 @@ extension TrackersViewController {
         }
     }
 }
+
